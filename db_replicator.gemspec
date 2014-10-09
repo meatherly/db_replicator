@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["meatherly@gmail.com"]
   spec.summary       = ""
   spec.description   = ""
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/meatherly/db_replicator"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

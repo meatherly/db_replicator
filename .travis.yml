@@ -1,0 +1,13 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.0.0
+- 2.1.0
+deploy:
+provider: rubygems
+api_key:
+gem: db_replicator
+on:
+tags: true
+repo: meatherly/db_replicator
+all_branches: true
