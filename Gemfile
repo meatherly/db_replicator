@@ -5,3 +5,7 @@ gemspec
 gem 'ruby-progressbar'
 gem 'net-ssh'
 gem 'net-scp'
+
+group :test do
+  gem 'rake'
+end
