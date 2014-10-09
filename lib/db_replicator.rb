@@ -1,4 +1,4 @@
-$:.unshift(File.dirname(__FILE__))
+$LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'db_replicator/version'
 require 'db_replicator/tasks'
 require 'db_replicator/configuration'
@@ -9,8 +9,6 @@ require 'colorize'
 module DbReplicator
   class << self
     attr_writer :configuration
-
-    
   end
 
   def self.configuration
@@ -46,5 +44,4 @@ module DbReplicator
   def self.prod_db_configs
     @prod_configs ||= DbReplicator.db_configs('production')
   end
-
 end

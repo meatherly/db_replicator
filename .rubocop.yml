@@ -1,0 +1,74 @@
+AllCops:
+  Exclude:
+    - 'spec/rails_app/**/*'
+
+# Offense count: 2
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/HashSyntax:
+  Enabled: true
+
+# Offense count: 1
+# Cop supports --auto-correct.
+Style/IndentationWidth:
+  Enabled: true
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: SupportedStyles.
+Style/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/SpaceBeforeBlockBraces:
+  Enabled: true
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
+Style/SpaceInsideBlockBraces:
+  Enabled: true
+
+# Offense count: 58
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/StringLiterals:
+  Enabled: true
+
+# Offense count: 5
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/TrailingBlankLines:
+  Enabled: true
+
+# Offense count: 7
+# Cop supports --auto-correct.
+Style/TrailingWhitespace:
+  Enabled: true
+
+# Offense count: 1
+Lint/Void:
+  Enabled: false
+
+# Offense count: 24
+# Configuration parameters: AllowURI, URISchemes.
+Metrics/LineLength:
+  Enabled: false
+  Max: 210
+
+# Offense count: 3
+# Configuration parameters: CountComments.
+Metrics/MethodLength:
+  Enabled: false
+  Max: 16
+
+# Offense count: 7
+Style/Documentation:
+  Enabled: false
+
+# Offense count: 2
+Style/RegexpLiteral:
+  Enabled: false
+  MaxSlashes: 0

@@ -1,7 +1,7 @@
 require 'spec_helper'
 describe DbReplicator do
 
-  describe "#configure" do
+  describe '#configure' do
     before do
       DbReplicator.configure do |config|
         config.proxy_host = 'www.example.com'
