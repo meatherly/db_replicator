@@ -1,9 +1,9 @@
 require 'spec_helper'
 require 'generator_spec/test_case'
 require 'generator_spec'
-require 'generators/install_generator'
+require 'generators/db_replicator/install_generator'
 
-describe DbReplicator::Generators::InstallGenerator, type: :generator do
+describe DbReplicator::InstallGenerator, type: :generator do
   include GeneratorSpec::TestCase
   destination File.expand_path("../../tmp", __FILE__)
 
