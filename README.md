@@ -1,4 +1,4 @@
-# DbReplicator
+# DbReplicator [![Build Status](https://travis-ci.org/meatherly/db_replicator.svg?branch=master)](https://travis-ci.org/meatherly/db_replicator)
 
 This gem allow you to down load and import your production db to test with. 
 
@@ -9,7 +9,7 @@ As of now I only suport MySQL. I plan to add more adapters in the future. See TO
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'db_replicator'
+gem 'db_replicator', '~> 0.0.1'
 ```
 
 And then execute:
