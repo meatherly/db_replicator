@@ -9,12 +9,14 @@ As of now I only suport MySQL. I plan to add more adapters in the future. See TO
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'db_replicator', '~> 0.0.1'
+gem 'db_replicator', '~> 0.0.2'
 ```
 
 And then execute:
 
     $ rails g db_replicator:install
+
+Be sure to set the proxy_host to a server that can access your production database `db_replicator.rb` initializers file.
 
 ## Usage
 
@@ -27,6 +29,7 @@ You can download your production db by running:
 
 * Allow secure upload of production db to another enviroment. e.g. staging
 * Add more adapters. 
+* Write better tests!!!!
 
 
 ## Contributing
