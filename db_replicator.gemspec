@@ -20,13 +20,13 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 1.6'
   spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'generator_spec'
-  spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'rubocop'
-  spec.add_runtime_dependency 'sequel', '~> 4.15.0'
-  spec.add_runtime_dependency 'ruby-progressbar'
-  spec.add_runtime_dependency 'rails', '>= 4'
-  spec.add_runtime_dependency 'colorize'
+  spec.add_development_dependency 'generator_spec', '~> 0'
+  spec.add_development_dependency 'rspec', '~> 3', '>= 3'
+  spec.add_development_dependency 'rubocop', '~> 0'
+  spec.add_runtime_dependency 'sequel', '~> 4.15', '>= 4.15.0'
+  spec.add_runtime_dependency 'ruby-progressbar', '~> 0'
+  spec.add_runtime_dependency 'rails', '~> 3', '>= 3'
+  spec.add_runtime_dependency 'colorize', '~> 0'
 
   spec.required_ruby_version = '~> 2.0'
 

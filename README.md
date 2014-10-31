@@ -9,7 +9,7 @@ As of now I only suport MySQL. I plan to add more adapters in the future. See TO
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'db_replicator', '~> 0.0.2'
+gem 'db_replicator', '~> 0.0.4'
 ```
 
 And then execute:

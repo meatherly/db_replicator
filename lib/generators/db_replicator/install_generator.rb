@@ -10,15 +10,16 @@ module DbReplicator
 
     def create_dumps_dir
       empty_directory '.db_replicator_dumps'
+      create_file '.db_replicator_dumps/.gitkeep'
     end
 
     def add_dumps_dir_to_gitignore
       if File.exist?(File.join(destination_root, '.gitignore'))
         append_to_file '.gitignore' do
-          '.db_replicator_dumps'
+          '/.db_replicator_dumps/*.sql'
         end
       else
-        create_file '.gitignore', '.db_replicator_dumps'
+        create_file '.gitignore', '/.db_replicator_dumps/*.sql'
       end
     end
   end

@@ -34,7 +34,7 @@ module DbReplicator
   end
 
   def self.dumps_dir
-    File.join Rails.root, '.db_replicator_dumps'
+    File.join(Rails.root.join('.db_replicator_dumps'))
   end
 
   def self.dump_file
