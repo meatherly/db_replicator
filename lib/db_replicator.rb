@@ -30,7 +30,7 @@ module DbReplicator
   end
 
   def self.dump_file_name
-    ActiveRecord::Base.configurations['production']['database'] + '.sql'
+    @dump_file_name ||= "#{ActiveRecord::Base.configurations['production']['database']}-#{Time.current.to_i}.sql"
   end
 
   def self.dumps_dir

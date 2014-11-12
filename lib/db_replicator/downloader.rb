@@ -4,7 +4,7 @@ require 'ruby-progressbar'
 module DbReplicator
   class Downloader
     def self.mysqldump_command
-      "mysqldump -u #{DbReplicator.prod_db_configs['username']} --password=#{DbReplicator.prod_db_configs['password']} --verbose #{DbReplicator.prod_db_configs['database']} > #{DbReplicator.dump_file_name}"
+      "mysqldump -h #{DbReplicator.prod_db_configs['host']} -P #{DbReplicator.prod_db_configs['port']} -u #{DbReplicator.prod_db_configs['username']} --password=#{DbReplicator.prod_db_configs['password']} --verbose #{DbReplicator.prod_db_configs['database']} > #{DbReplicator.dump_file_name}"
     end
     def self.download_production
       Net::SSH.start(DbReplicator.configuration.proxy_host, DbReplicator.configuration.user) do |session|
