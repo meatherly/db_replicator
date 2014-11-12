@@ -4,6 +4,7 @@ require 'db_replicator/tasks'
 require 'db_replicator/configuration'
 require 'db_replicator/downloader'
 require 'db_replicator/importer'
+require 'db_replicator/uploader'
 require 'colorize'
 
 module DbReplicator

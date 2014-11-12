@@ -13,4 +13,9 @@ namespace :dbr do
   task download_prod_db: :environment do
     DbReplicator::Downloader.download_production
   end
+
+  desc 'Transfer the production db to the staging db'
+  task prod_to_staging: [:environment, :download_prod_db] do
+    DbReplicator::Uploader.upload
+  end
 end
