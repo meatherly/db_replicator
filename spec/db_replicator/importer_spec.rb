@@ -33,9 +33,9 @@ module DbReplicator
       context 'env db is already mysql' do
         before do
           DbReplicator.stub(:dump_file) {'dump_file'}
-          expect(DbReplicator).to receive(:db_configs).with('development').and_return(Hash['adapter', 'mysql2', 'database', 'development'])
+          expect(DbReplicator).to receive(:db_configs).with('development').and_return(Hash['adapter', 'mysql2', 'database', 'development', 'username', 'apps', 'password', 'p@ssw0rd'])
           expect(importer).to receive(:exec_cmd).with("bundle exec rake db:drop db:create")
-          expect(importer).to receive(:exec_cmd).with("mysql -u root --database=development < #{DbReplicator.dump_file}")
+          expect(importer).to receive(:exec_cmd).with("mysql -h localhost -P 3000 -u apps --password=p@ssw0rd --database=development < #{DbReplicator.dump_file}")
           expect(importer).to receive(:exec_cmd).with("bundle exec rake db:migrate")
         end
 
@@ -44,5 +44,5 @@ module DbReplicator
         end
       end
     end
-  end  
+  end
 end
