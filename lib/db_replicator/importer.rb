@@ -23,8 +23,8 @@ module DbReplicator
             convert_sql_dump_and_import
           end
         else
-          puts "mysql -u root --database=#{@to_db_configs['database']} < #{DbReplicator.dump_file}"
-          exec_cmd "mysql -u root --database=#{@to_db_configs['database']} < #{DbReplicator.dump_file}"
+          puts "mysql -h #{@to_db_configs['host']} -P #{@to_db_configs['port']} -u #{@to_db_configs['username']} --password=#{@to_db_configs['password']} --database=#{@to_db_configs['database']} < #{DbReplicator.dump_file}"
+          exec_cmd "mysql -h #{@to_db_configs['host']} -P #{@to_db_configs['port']} -u #{@to_db_configs['username']} --password=#{@to_db_configs['password']} --database=#{@to_db_configs['database']} < #{DbReplicator.dump_file}"
         end
       end
       DbReplicator.document_action 'Executing db:migrate to update database Just in case their are pending migrations', 'Migrate complete.' do
