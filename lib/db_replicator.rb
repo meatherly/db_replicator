@@ -4,6 +4,7 @@ require 'db_replicator/tasks'
 require 'db_replicator/configuration'
 require 'db_replicator/downloader'
 require 'db_replicator/importer'
+require 'db_replicator/uploader'
 require 'colorize'
 
 module DbReplicator
@@ -30,7 +31,7 @@ module DbReplicator
   end
 
   def self.dump_file_name
-    ActiveRecord::Base.configurations['production']['database'] + '.sql'
+    @dump_file_name ||= "#{ActiveRecord::Base.configurations['production']['database']}-#{Time.current.to_i}.sql"
   end
 
   def self.dumps_dir
